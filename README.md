@@ -13,3 +13,9 @@
 * A aplicação so funciona se o banco estiver configurado corretamente .
 * Entre na pasta do projeto e de NPM start 
 * Toda vez que a aplicação rodar , a aplicação ira verificar se há tabelas novas ou modificações nas tabelas existentes 
+
+## Criando uma tabela 
+sequelize model:generate --name nomedaclasse --attributes
+
+* Exemplo 
+sequelize model:generate --name Pessoas --attributes nomePessoa:string,idade:number
