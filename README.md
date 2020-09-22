@@ -18,4 +18,4 @@
 sequelize model:generate --name nomedaclasse --attributes
 
 * Exemplo 
-sequelize model:generate --name Pessoas --attributes nomePessoa:string,idade:number
+- sequelize model:generate --name Pessoas --attributes nomePessoa:string,idade:number
