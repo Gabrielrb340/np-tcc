@@ -5,7 +5,8 @@ var logger = require('morgan');
 const port = 3001
 const {sequelize} = require('./models/index');
 
-var usersRouter = require('./routes/usuarioteste-route');
+var usertesteRouter = require('./routes/usuarioteste-route');
+var userRouter = require('./routes/usuario-route');
 
 var app = express();
 
@@ -20,6 +21,7 @@ sequelize.sync({ alter: true }).then(()=>{
       console.log('Example app listening at http://localhost:'+port)
     })
   })
-app.use('/usuarioTeste', usersRouter);
+app.use('/usuarioTeste', usertesteRouter);
+app.use('/usuario', userRouter);
 
 module.exports = app;
