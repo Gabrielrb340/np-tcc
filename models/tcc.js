@@ -22,6 +22,18 @@ module.exports = (sequelize, DataTypes) => {
     tema:  {
       type: Sequelize.STRING(100),
       field: 'DES_TEMA'
+    },
+    titulo:  {
+      type: Sequelize.STRING(400),
+      field: 'DES_TITULO'
+    },
+    resumo:  {
+      type: Sequelize.STRING(500),
+      field: 'DES_RESUMO'
+    },
+    palavra:  {
+      type: Sequelize.STRING(10),
+      field: 'DES_PALAVRA_CHAVE'
     }
   }, {
     sequelize,
