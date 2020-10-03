@@ -18,7 +18,8 @@ module.exports = (sequelize, DataTypes) => {
         id: {
             type: Sequelize.INTEGER,
             field: "COD_USUARIO",
-            primaryKey: true
+            primaryKey: true,
+            autoIncrement: true
         },
         email: {
             type: Sequelize.STRING(50),
