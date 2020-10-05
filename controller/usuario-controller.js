@@ -9,3 +9,9 @@ exports.getUsuarios = async(req, res) => {
         res.send(r)
         }).catch(c => { console.log(c + '') })
 }
+
+exports.insertUsuario = async(req, res) => {
+    await db.create(req.body).then(r => {
+        res.send(r)
+        }).catch(c => { console.log(c + '') })
+}
