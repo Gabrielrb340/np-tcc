@@ -25,7 +25,9 @@ module.exports = (sequelize, DataTypes) => {
     }
   }, {
     sequelize,
-    modelName: 'TB_PERFIL',
+    modelName: 'Perfil',
+    freezeTableName: true
+
   });
   return perfil;
 };

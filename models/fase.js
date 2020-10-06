@@ -25,7 +25,9 @@ module.exports = (sequelize, DataTypes) => {
     }
   }, {
     sequelize,
-    modelName: 'TB_FASE',
+    modelName: 'Fase',
+    freezeTableName: true
+
   });
   return fase;
 };

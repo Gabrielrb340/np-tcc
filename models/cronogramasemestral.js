@@ -20,7 +20,9 @@ module.exports = (sequelize, DataTypes) => {
     dtaFim: {field:"DTA_FIM",type:Sequelize.DATE}
   }, {
     sequelize,
-    modelName: 'TB_CRONOGRAMA_SEMESTRAL',
+    modelName: 'CronogramaSemestral',
+    freezeTableName: true
+
   });
   return cronogramaSemestral;
 };

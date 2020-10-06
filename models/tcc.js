@@ -37,7 +37,9 @@ module.exports = (sequelize, DataTypes) => {
     }
   }, {
     sequelize,
-    modelName: 'TB_TCC',
+    modelName: 'Tcc',
+    freezeTableName: true
+
   });
   return tcc;
 };

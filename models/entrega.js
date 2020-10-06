@@ -21,7 +21,9 @@ module.exports = (sequelize, DataTypes) => {
     dtaEntrega: {field:"DTA_ENTREGA",type:Sequelize.DATE}
   }, {
     sequelize,
-    modelName: 'TB_ENTREGA',
+    modelName: 'Entrega',
+    freezeTableName: true
+
   });
   return entrega;
 };

@@ -58,7 +58,9 @@ module.exports = (sequelize, DataTypes) => {
         }
     }, {
         sequelize,
-        modelName: 'TB_USUARIO',
+        modelName: 'Usuario',
+        freezeTableName: true
+
     });
     return Usuario;
 };

@@ -9,7 +9,7 @@ var usertesteRouter = require('./routes/usuarioteste-route');
 var userRouter = require('./routes/usuario-route');
 
 var usersRouter = require('./routes/usuarioteste-route');
-var cronogramaRouter = require('./routes/cronograma-controller');
+var cronogramaRouter = require('./routes/cronogramaRoutes');
 var app = express();
 
 app.use(logger('dev'));

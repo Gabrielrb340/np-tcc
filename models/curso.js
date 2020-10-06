@@ -25,7 +25,9 @@ module.exports = (sequelize, DataTypes) => {
     }
   }, {
     sequelize,
-    modelName: 'TB_CURSO',
-  });
+    modelName: 'Curso',
+    freezeTableName: true
+
+  },);
   return curso;
 };
