@@ -1,4 +1,4 @@
-const db = require('../models/index').TB_CRONOGRAMA_SEMESTRAL;
+const db = require('../models/index').CronogramaSemestral;
 const { QueryTypes } = require('sequelize');
 const { sequelize } = require('../models');
 const Usuario = require('../models/usuario')
