@@ -2,6 +2,8 @@ var express = require('express');
 var path = require('path');
 var cookieParser = require('cookie-parser');
 var logger = require('morgan');
+var cors = require('cors')
+
 const port = 3001
 const { sequelize } = require('./models/index');
 
@@ -11,6 +13,7 @@ var userRouter = require('./routes/usuario-route');
 var usersRouter = require('./routes/usuarioteste-route');
 var cronogramaRouter = require('./routes/cronogramaRoutes');
 var app = express();
+app.use(cors())
 
 app.use(logger('dev'));
 app.use(express.json());

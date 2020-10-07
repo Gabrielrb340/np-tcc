@@ -10,14 +10,15 @@ module.exports = (sequelize, DataTypes) => {
      * The `models/index` file will call this method automatically.
      */
     static associate(models) {
-      // define association here
+      this.hasMany(models.Usuario,{foreignKey:{name:'COD_PERFIL'}})
     }
   };
   perfil.init({
     id:{
       type: Sequelize.INTEGER,
       field: 'COD_PERFIL',
-      primaryKey: true
+      primaryKey: true,
+      autoIncrement:true
     },
     perfil: {
       type: Sequelize.STRING(100),

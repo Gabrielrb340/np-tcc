@@ -4,20 +4,19 @@ const {
 } = require('sequelize');
 module.exports = (sequelize, DataTypes) => {
   class fase extends Model {
-    /**
-     * Helper method for defining associations.
-     * This method is not a part of Sequelize lifecycle.
-     * The `models/index` file will call this method automatically.
-     */
+    
     static associate(models) {
-      // define association here
+      this.hasMany(models.CronogramaSemestral,{foreignKey: {name: 'COD_FASE_TCC',allowNull: false}})
+      this.hasMany(models.Tcc,{foreignKey: {name:'COD_FASE'}})
+      this.belongsTo(models.Curso,{foreignKey: {name:'COD_CURSO'}})
     }
   };
   fase.init({
     id:{
       type: Sequelize.INTEGER,
       field: 'COD_FASE',
-      primaryKey: true
+      primaryKey: true,
+      autoIncrement:true
     },
     fase: {
       type: Sequelize.STRING(100),
