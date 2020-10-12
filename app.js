@@ -12,6 +12,8 @@ var userRouter = require('./routes/usuario-route');
 
 var usersRouter = require('./routes/usuarioteste-route');
 var cronogramaRouter = require('./routes/cronogramaRoutes');
+var entregaRouter = require('./routes/entrega-route');
+
 var app = express();
 app.use(cors())
 
@@ -28,7 +30,7 @@ sequelize.sync({ alter: true }).then(() => {
 })
 app.use('/usuarioTeste', usertesteRouter);
 app.use('/usuario', userRouter);
-
+app.use('/entrega',entregaRouter);
 app.use('/usuarioTeste', usersRouter);
 app.use('/cronograma', cronogramaRouter);
 
