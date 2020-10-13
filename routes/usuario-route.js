@@ -7,5 +7,5 @@ router.get('/',userController.getUsuarios);
 // router.put('/:id',userController.updateUsuarioTeste);
 // router.delete('/:id',userController.deleteUsuarioTestePorId);
 // router.post('/',userController.insertUsuarioTeste);
-
+router.post('/',userController.postUsuario);
 module.exports = router;
