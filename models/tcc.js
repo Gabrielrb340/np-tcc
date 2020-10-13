@@ -10,14 +10,18 @@ module.exports = (sequelize, DataTypes) => {
      * The `models/index` file will call this method automatically.
      */
     static associate(models) {
-      // define association here
+      this.belongsToMany(models.Usuario,{through:'TB_ALUNO_TCC'})
+      this.belongsTo(models.Curso,{foreignKey:{name:'COD_CURSO'}})
+      this.hasMany(models.Entrega,{foreignKey:{name:'COD_TCC'}})
+      this.belongsTo(models.Fase,{foreignKey: {name:'COD_FASE'}})
     }
   };
   tcc.init({
     id:{
       type: Sequelize.INTEGER,
       field: 'COD_TCC',
-      primaryKey: true
+      primaryKey: true,
+      autoIncrement:true
     },
     tema:  {
       type: Sequelize.STRING(100),
@@ -37,7 +41,9 @@ module.exports = (sequelize, DataTypes) => {
     }
   }, {
     sequelize,
-    modelName: 'TB_TCC',
+    modelName: 'Tcc',
+    freezeTableName: true
+
   });
   return tcc;
 };

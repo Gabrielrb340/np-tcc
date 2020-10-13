@@ -77,7 +77,7 @@ exports.getUsuarioTestePorNome = async(req, res) => {
     })
 }
 exports.getTodosUsuarioTesteSelectQuery = async(req, res) => {
-    const usuarios = await sequelize.query('Select * from usuarios', { type: QueryTypes.SELECT })
+    const usuarios = await sequelize.query('Select * from usuario', { type: QueryTypes.SELECT })
         .then(resultado => {
             res.send(resultado)
         }).catch(error => {

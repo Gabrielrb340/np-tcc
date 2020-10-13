@@ -10,7 +10,6 @@
     "createdAt"   : "data_criacao",
     "updatedAt"   : "data_modificacao",
     "deletedAt": "data_exclusao"
-
     }
   },
   "test": {
