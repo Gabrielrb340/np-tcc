@@ -1,4 +1,4 @@
-const db = require('../models/index').TB_CURSO;
+const db = require('../models/index').Curso;
 const { QueryTypes } = require('sequelize');
 const { sequelize } = require('../models');
 const curso = require('../models/curso')
