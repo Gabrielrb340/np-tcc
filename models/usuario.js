@@ -20,13 +20,13 @@ module.exports = (sequelize, DataTypes) => {
             field: "COD_USUARIO",
             primaryKey: true
         },
+        nome: {
+            type: Sequelize.STRING,
+            field: "NOM_USUARIO"
+        },
         email: {
             type: Sequelize.STRING(50),
             field: "EMAIL"
-        },
-        desEmail: {
-            type: Sequelize.STRING(100),
-            field: "DES_EMAIL"
         },
         matricula: {
             type: Sequelize.STRING(15),
