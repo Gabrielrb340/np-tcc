@@ -8,4 +8,7 @@ router.get('/',userController.getUsuarios);
 // router.delete('/:id',userController.deleteUsuarioTestePorId);
 // router.post('/',userController.insertUsuarioTeste);
 router.post('/',userController.postUsuario);
+
+router.delete('/:id', userController.deleteUsuario)
+
 module.exports = router;
