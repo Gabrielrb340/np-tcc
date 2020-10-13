@@ -7,8 +7,10 @@ const port = 3001
 const { sequelize } = require('./models/index');
 var usertesteRouter = require('./routes/usuarioteste-route');
 var userRouter = require('./routes/usuario-route');
-var usersRouter = require('./routes/usuarioteste-route');
-var cursoRoute = require('./routes/curso-route');
+var cursoRouter = require('./routes/curso-route');
+var cronogramaRouter = require('./routes/cronogramaRoutes');
+var entregaRouter = require('./routes/entrega-route');
+
 var app = express();
 app.use(cors())
 app.use(logger('dev'));
@@ -25,10 +27,9 @@ sequelize.sync({ alter: true }).then(() => {
 
 app.use('/usuarioTeste', usertesteRouter);
 app.use('/usuario', userRouter);
-app.use('/usuarioTeste', usersRouter);
-app.use('/usuarioTeste', usersRouter);
+app.use('/entrega',entregaRouter);
 app.use('/cronograma', cronogramaRouter);
-app.use('/curso', cursoRoute);
+app.use('/curso', cursoRouter);
 
 
 module.exports = app;
