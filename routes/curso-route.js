@@ -1,7 +1,8 @@
 var express = require('express');
-const userController = require('../controller/curso-controller')
+const cursoController = require('../controller/curso-controller')
 var router = express.Router();
 
-router.post('/',userController.insertCurso);
-router.delete('/:id', userController.deleteCurso);
+router.post('/',cursoController.insertCurso);
+router.get('/',cursoController.getCursos);
+router.delete('/:id', cursoController.deleteCurso);
 module.exports = router;

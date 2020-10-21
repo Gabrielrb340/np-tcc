@@ -1,7 +1,6 @@
 const db = require('../models/index').Curso;
 const { QueryTypes } = require('sequelize');
 const { sequelize } = require('../models');
-const curso = require('../models/curso')
 
 
 exports.insertCurso = async(req, res) => {
@@ -9,7 +8,11 @@ exports.insertCurso = async(req, res) => {
         res.send(r)
         }).catch(c => { console.log(c + '') })
 }
-
+exports.getCursos = async(req, res) => {
+    await db.findAll().then(r => {
+        res.send(r)
+        }).catch(c => { console.log(c + '') })
+}
 exports.deleteCurso = async(req, res) =>{
     console.log(" ------ id: ", req.params.id)
     await db.destroy({where:{id:req.params.id}}).then(result =>{
