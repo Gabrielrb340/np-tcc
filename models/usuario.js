@@ -55,7 +55,15 @@ module.exports = (sequelize, DataTypes) => {
         sexo: {
             type: Sequelize.BOOLEAN,
             field: "SEXO"
-        }
+        },
+        data_criacao: {
+            type: Sequelize.DATE,
+            field: "data_criacao"
+        },
+        data_modificacao: {
+            type: Sequelize.DATE,
+            field: "data_modificacao"
+        },
     }, {
         sequelize,
         modelName: 'TB_USUARIO',
