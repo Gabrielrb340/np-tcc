@@ -12,6 +12,7 @@ module.exports = (sequelize, DataTypes) => {
          */
         static associate(models) {
             this.belongsTo(models.Perfil,{foreignKey:{name:'COD_PERFIL'}})
+            this.belongsTo(models.Perfil,{foreignKey:{name:'COD_CURSO'}})
             this.hasMany(models.Entrega,{foreignKey:{name:'COD_USUARIO'}})
             this.belongsToMany(models.Tcc,{through:'TB_ALUNO_TCC'})
             this.hasMany(models.Tcc,{foreignKey: {name: 'COD_PROFESSOR_ORIENTADOR',allowNull: false}})
@@ -41,8 +42,8 @@ module.exports = (sequelize, DataTypes) => {
             field: "MATRICULA"
         },
         nomCurso: {
-            type: Sequelize.STRING(50),
-            field: "NOM_CURSO"
+            type: Sequelize.INTEGER,
+            field: "COD_CURSO"
         },
         telefone: {
             type: Sequelize.STRING(15),

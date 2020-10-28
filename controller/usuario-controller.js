@@ -15,6 +15,7 @@ exports.postUsuario = async(req, res) => {
         res.send(r)
         }).catch(c => { console.log(c + '') })
     }
+
 exports.deleteUsuario = async(req, res) =>{
     console.log(" ------ id: ", req.params.id)
     await db.destroy({where:{id:req.params.id}}).then(result =>{
