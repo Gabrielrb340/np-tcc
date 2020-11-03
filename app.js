@@ -10,6 +10,7 @@ var userRouter = require('./routes/usuario-route');
 var cursoRouter = require('./routes/curso-route');
 var cronogramaRouter = require('./routes/cronogramaRoutes');
 var entregaRouter = require('./routes/entrega-route');
+var perfilRouter = require('./routes/perfil-route');
 
 var app = express();
 app.use(cors())
@@ -30,6 +31,7 @@ app.use('/usuario', userRouter);
 app.use('/entrega',entregaRouter);
 app.use('/cronograma', cronogramaRouter);
 app.use('/curso', cursoRouter);
+app.use('/perfil', perfilRouter);
 
 
 module.exports = app;
