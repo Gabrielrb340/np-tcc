@@ -11,10 +11,11 @@ module.exports = (sequelize, DataTypes) => {
          * The `models/index` file will call this method automatically.
          */
         static associate(models) {
-            this.belongsTo(models.Perfil,{foreignKey:{name:'COD_PERFIL'}})
-            this.hasMany(models.Entrega,{foreignKey:{name:'COD_USUARIO'}})
-            this.belongsToMany(models.Tcc,{through:'TB_ALUNO_TCC'})
-            this.hasMany(models.Tcc,{foreignKey: {name: 'COD_PROFESSOR_ORIENTADOR',allowNull: false}})
+            this.belongsTo(models.Perfil, { foreignKey: { name: 'COD_PERFIL' } })
+            this.hasMany(models.Entrega, { foreignKey: { name: 'COD_USUARIO' } })
+            this.belongsToMany(models.Tcc, { through: 'TB_ALUNO_TCC' })
+            this.belongsTo(models.Curso, { foreignKey: { name: 'COD_CURSO' } })
+            this.hasMany(models.Tcc, { foreignKey: { name: 'COD_PROFESSOR_ORIENTADOR', allowNull: false } })
         }
     };
     Usuario.init({
@@ -22,7 +23,7 @@ module.exports = (sequelize, DataTypes) => {
             type: Sequelize.INTEGER,
             field: "COD_USUARIO",
             primaryKey: true,
-            autoIncrement:true
+            autoIncrement: true
         },
         codPerfil: {
             type: Sequelize.INTEGER,
@@ -40,9 +41,9 @@ module.exports = (sequelize, DataTypes) => {
             type: Sequelize.STRING(15),
             field: "MATRICULA"
         },
-        nomCurso: {
+        codCurso: {
             type: Sequelize.STRING(50),
-            field: "NOM_CURSO"
+            field: "COD_CURSO"
         },
         telefone: {
             type: Sequelize.STRING(15),
