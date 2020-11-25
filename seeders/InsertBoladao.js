@@ -13,15 +13,14 @@ module.exports = {
      for (let i = 0; i < 5; i++) {
       await queryInterface.bulkInsert('Usuario', [{
         email: 'Pessoa1'+i+'@gmail.com',
-        DES_EMAIL:'Não sei que porra é des email',
         matricula:'RA INVALIDO xd xd',
-        NOM_CURSO:'S.I',
         telefone:'9 9999 9999',
         DES_ENDERECO:'RUA DOS BOBO numero 0',
         senha:'123456',
         DATA_NASC:new Date(),
         sexo:1,
-        COD_PERFIL:perfilRow.COD_PERFIL
+        COD_PERFIL:perfilRow.COD_PERFIL,
+        NOM_USUARIO:'teste'+i
       }], {});
      }
      await queryInterface.bulkInsert('curso', [{
