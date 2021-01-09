@@ -62,7 +62,7 @@ module.exports = (sequelize, DataTypes) => {
             field: "DATA_NASC"
         },
         sexo: {
-            type: Sequelize.BOOLEAN,
+            type: Sequelize.INTEGER,
             field: "SEXO"
         }
     }, {
